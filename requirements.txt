@@ -1,0 +1,7 @@
+pandas
+numpy
+pymysql
+SQLAlchemy
+matplotlib
+openpyxl
+notebook
