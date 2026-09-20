@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>电商经营与用户价值数据分析 · 作品集</title>
+<meta name="description" content="基于 Olist 电商 9.9 万真实订单的端到端商业数据分析作品集：经营、用户、商品卖家、物流体验四维分析。">
+<style>
+  :root{--blue:#3b6ea5;--ink:#233;--muted:#6b7787;--bg:#f5f7f9;--card:#fff;--line:#e6ebf0;--green:#3a8f5c;--orange:#d95d39;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Microsoft YaHei","PingFang SC",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+  a{color:var(--blue);text-decoration:none}
+  section{padding:64px 0}
+  .kicker{color:var(--blue);font-weight:600;font-size:13px;letter-spacing:2px;text-transform:uppercase}
+  h2{font-size:26px;margin:8px 0 28px;font-weight:700}
+  .muted{color:var(--muted)}
+
+  /* Hero */
+  .hero{background:linear-gradient(135deg,#24405c 0%,#3b6ea5 60%,#5f86b3 100%);color:#fff;padding:88px 0;text-align:center}
+  .hero h1{font-size:40px;font-weight:800;letter-spacing:1px}
+  .hero .stack{margin:14px 0 6px;color:#cfe0f2;font-weight:500}
+  .hero p.desc{max-width:680px;margin:14px auto 28px;color:#eaf2fb;font-size:16px}
+  .stats{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:30px 0 34px}
+  .stat{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:12px 20px;min-width:120px}
+  .stat .v{font-size:24px;font-weight:800}
+  .stat .l{font-size:12px;color:#cfe0f2}
+  .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:600;font-size:14px}
+  .btn.primary{background:#fff;color:var(--blue)}
+  .btn.ghost{border:1.5px solid #fff;color:#fff}
+  .btn:hover{opacity:.92}
+  .hero .findings{margin-top:40px;text-align:left;background:rgba(0,0,0,.18);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:18px 22px;font-size:14px}
+  .hero .findings b{color:#ffd9a8}
+
+  /* find --> */
+  .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .card h3{font-size:17px;margin-bottom:8px}
+  .card .num{font-size:30px;font-weight:800;color:var(--blue)}
+  .card p{font-size:14px;color:var(--muted)}
+  .card .rec{margin-top:12px;font-size:13.5px;border-left:4px solid var(--orange);padding-left:10px;color:#8a5a20;background:#fff7ee;border-radius:4px;padding:8px 10px}
+
+  /* dashboard preview */
+  .dash{background:#0d1b2a;border-radius:16px;padding:22px}
+  .dash img{width:100%;border-radius:8px;border:1px solid #2a3c52}
+  .dash .tabs{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+  .dash .tabs button{background:transparent;color:#b8c8d8;border:1px solid #2a3c52;padding:6px 14px;border-radius:8px;cursor:pointer;font-size:13px}
+  .dash .tabs button.active{background:#3b6ea5;color:#fff;border-color:#3b6ea5}
+
+  /* flow */
+  .flow{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .flow .step{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:13px;flex:1;min-width:150px}
+  .flow .step b{display:block;font-size:14px}
+  .flow .arrow{font-size:18px;color:var(--blue)}
+
+  /* sql cases */
+  .sql-item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:16px}
+  .sql-item .q{margin:8px 0;font-style:italic;color:var(--muted)}
+  .sql-item code{background:#f1f4f7;padding:2px 6px;border-radius:5px;font-size:12.5px}
+  .sql-item .ans{margin-top:10px;font-size:15px;font-weight:600}
+
+  .links-row{display:flex;gap:22px;flex-wrap:wrap;margin-top:8px;font-size:15px}
+  footer{background:#1a2a3a;color:#aab7c4;text-align:center;padding:30px 0;font-size:13px}
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div class="wrap">
+    <h1>电商经营与用户价值数据分析</h1>
+    <div class="stack">Python · MySQL · SQL · Power BI</div>
+    <p class="desc">基于 9.9 万笔真实电商订单，从<b>经营增长、用户价值、商品卖家、物流体验</b>四个维度完成端到端商业数据分析，并把结论落到可执行的运营建议。</p>
+    <div class="stats">
+      <div class="stat"><div class="v">13.22M</div><div class="l">GMV (BRL)</div></div>
+      <div class="stat"><div class="v">96,478</div><div class="l">有效订单</div></div>
+      <div class="stat"><div class="v">96,096</div><div class="l">用户</div></div>
+      <div class="stat"><div class="v">30 +</div><div class="l">业务SQL</div></div>
+    </div>
+    <div class="cta">
+      <a class="btn primary" href="assets/dashboard/index.html">查看 Dashboard</a>
+      <a class="btn ghost" href="https://github.com/wangsehn/ecommerce-business-analysis/blob/main/docs/analysis_report.md" target="_blank">完整分析报告</a>
+      <a class="btn ghost" href="https://github.com/wangsehn/ecommerce-business-analysis/tree/main/sql" target="_blank">查看 SQL</a>
+    </div>
+    <!-- 关键发现直接放上面 -->
+    <div class="findings">
+      <b>核心发现：</b>复购率仅 <b>3.0%</b>（97% 用户只买一单）｜物流超时单评分较准时单低 <b>1.73 分</b>｜前 20% 卖家贡献约 <b>82% GMV</b>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 我发现了什么 ============ -->
+<section>
+  <div class="wrap">
+    <div class="kicker">Key Findings</div>
+    <h2>我发现了什么？</h2>
+    <div class="card-grid">
+      <div class="card">
+        <div class="num">3.0%</div>
+        <h3>复购率仅 3.0%</h3>
+        <p>97% 的购买用户只完成一次订单，增长高度依赖新增用户，平台是"获客驱动"而非"留存驱动"。</p>
+        <div class="rec">建议：重点优化"首单 → 二单"转化，30 天窗口做二次购买激励。</div>
+      </div>
+      <div class="card">
+        <div class="num">-1.73 分</div>
+        <h3>超时订单评分下降 1.73 分</h3>
+        <p>准时订单平均评分 4.30，超时订单仅 2.57；配送 &gt;15 天评分低至 3.60。</p>
+        <div class="rec">建议：优先治理高延迟地区（北部州）与高延迟卖家。</div>
+      </div>
+      <div class="card">
+        <div class="num">82%</div>
+        <h3>前 20% 卖家贡献约 82% GMV</h3>
+        <p>供应侧明显集中在前 2% 头部（36%）+ 腰部（46%），80% 长尾卖家仅贡献 17.7%。</p>
+        <div class="rec">建议：降低头部依赖、清理零活跃长尾、培育腰部卖家。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Dashboard ============ -->
+<section style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="kicker">Dashboard</div>
+    <h2>四主题经营 Dashboard</h2>
+    <div class="dash">
+      <div class="tabs">
+        <button class="active" data-img="dashboard_overview.png">经营总览</button>
+        <button data-img="dashboard_customer.png">用户价值</button>
+        <button data-img="dashboard_product.png">商品与卖家</button>
+        <button data-img="dashboard_logistics.png">物流与体验</button>
+      </div>
+      <img id="dashimg" src="assets/composite/dashboard_overview.png" alt="Dashboard">
+    </div>
+    <p class="muted" style="margin-top:14px;text-align:center">
+      → 查看<b style="color:var(--blue)"><a href="assets/dashboard/index.html">完整交互式 Dashboard</a></b>（4 页可切换）
+    </p>
+  </div>
+</section>
+
+<!-- ============ 分析流程 ============ -->
+<section>
+  <div class="wrap">
+    <div class="kicker">Process</div>
+    <h2>分析过程</h2>
+    <div class="flow">
+      <div class="step"><b>Raw Data</b>Olist 9 表原始数据</div><div class="arrow">→</div>
+      <div class="step"><b>Python · Pandas</b>数据质量、缺失/重复、类型转换</div><div class="arrow">→</div>
+      <div class="step"><b>MySQL</b>8 表关系模型 + 外键约束</div><div class="arrow">→</div>
+      <div class="step"><b>SQL</b>经营/用户/商品/卖家/物流分析</div><div class="arrow">→</div>
+      <div class="step"><b>Power BI</b>四页可视化 Dashboard</div><div class="arrow">→</div>
+      <div class="step"><b>Insight</b>业务洞察与建议</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SQL 亮点 ============ -->
+<section style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="kicker">SQL Highlights</div>
+    <h2>三个最能证明 SQL 能力的 Case</h2>
+
+    <div class="sql-item">
+      <h3>Case 1 · 用户复购间隔</h3>
+      <div class="q">用户下一次购买通常多久以后发生？</div>
+      <code>LAG(order_purchase_timestamp) OVER (PARTITION BY customer_unique_id ORDER BY ...)</code>
+      <div class="ans">▸ 中位数 29 天 → 建议在 30 天窗口做二次购买激励。</div>
+    </div>
+
+    <div class="sql-item">
+      <h3>Case 2 · 卖家分层</h3>
+      <div class="q">GMV 是否过度集中在少数卖家？</div>
+      <code>RANK() / NTILE() OVER (ORDER BY SUM(price) DESC)</code>
+      <div class="ans">▸ 前 20% 卖家贡献约 82% GMV → 降低头部依赖。</div>
+    </div>
+
+    <div class="sql-item">
+      <h3>Case 3 · Cohort 留存</h3>
+      <div class="q">不同首购月份的用户，之后还有多少会继续购买？</div>
+      <code>MIN(...) OVER (PARTITION BY customer_unique_id) ... 留存率 = 留存数 / 首购人数</code>
+      <div class="ans">▸ 首期留存偏低 → 平台靠获客而非留存驱动。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 项目结构 & 链接 ============ -->
+<section>
+  <div class="wrap">
+    <div class="kicker">More</div>
+    <h2>深入看到技术细节</h2>
+    <div class="links-row muted">
+      <a href="https://github.com/wangsehn/ecommerce-business-analysis/blob/main/docs/metric_definition.md" target="_blank">指标口径中心</a>
+      <a href="https://github.com/wangsehn/ecommerce-business-analysis/blob/main/docs/analysis_framework.md" target="_blank">分析框架</a>
+      <a href="https://github.com/wangsehn/ecommerce-business-analysis/blob/main/docs/data_dictionary.md" target="_blank">数据字典</a>
+      <a href="https://github.com/wangsehn/ecommerce-business-analysis/blob/main/docs/audit_report.md" target="_blank">项目审计与纠错</a>
+      <a href="https://github.com/wangsehn/ecommerce-business-analysis/blob/main/docs/interview_guide.md" target="_blank">面试指南</a>
+      <a href="https://github.com/wangsehn/ecommerce-business-analysis/blob/main/docs/debug_log.md" target="_blank">调试日志</a>
+      <a href="https://github.com/wangsehn/ecommerce-business-analysis/blob/main/notebooks/exploratory_analysis.ipynb" target="_blank">探索性 Notebook</a>
+    </div>
+  </div>
+</section>
+
+<footer>电商经营与用户价值数据分析 · 数据来源 Brazilian E-Commerce Public Dataset by Olist</footer>
+
+<script>
+  const tabs=document.querySelectorAll('.dash .tabs button');
+  const img=document.getElementById('dashimg');
+  tabs.forEach(b=>b.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    img.src='assets/composite/'+b.dataset.img;
+  }));
+</script>
+</body>
+</html>
